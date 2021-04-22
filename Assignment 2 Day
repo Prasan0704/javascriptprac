@@ -1,0 +1,10 @@
+city = 'aburoad'
+College name = 'PIET'
+Name = 'prasan'
+Experience field = 'C++'
+No. of project = 2
+Salary = 20000.50
+Isgraduated=False 
+print("""My name is {},Studying in {}, my home town is {},
+I Have experience in {}, i have worked on {} project,
+Earning monthly salary{}""".format(Name,college name,city,Experience field,No. of project,salary,Isgraduated))
