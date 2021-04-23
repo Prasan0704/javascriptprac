@@ -1,0 +1,6 @@
+#string function 
+Question ---> Use string functions to count the occurrence of 'y' in a word given by user.
+ANSWER --->
+Name = input("Enter the name:")
+Name_count = Name.count('y')  # counting the character “y” in the givenstring
+print("The count of 'y' is", Name_count)
