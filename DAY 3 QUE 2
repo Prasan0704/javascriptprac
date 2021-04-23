@@ -1,0 +1,10 @@
+#Simple Calculator: get 2 numbers from the user and print the result of addition, subtraction, multiplication and floor division, decimal division, remainder, power of the input numbers
+a = float(input("enter the first element:"))
+b = float(input("enter the second element:"))
+print("a + b = {}".format(a + b))
+print("a - b = {}".format(a - b))
+print("a * b = {}".format(a * b))
+print("a / b = {}".format(a / b))
+print("a % b = {}".format(a % b))
+print("a // b = {}".format(a // b))
+print("a ** b = {}".format(a ** b))
