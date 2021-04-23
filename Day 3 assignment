@@ -1,0 +1,6 @@
+#calculate Age of a person - User should enter the year of birth and the program should output the age.. eg : entered value is 1990, output age is 30
+#ANSWER
+Current_year = 2021
+Birth_year = int(input("Enter Birth year:"))
+Current_age= Current_year - Birth_year
+print(Current_age)
