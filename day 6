@@ -1,0 +1,61 @@
+test_str = "geeksforgeeks"
+  
+# printing original string
+print("The original string is : " + test_str)
+  
+# Vowel indices in String
+# Using loop
+res = []
+for ele in range(len(test_str)):
+    if test_str[ele] in "aeiou":
+       res.append(ele)
+  
+# printing result 
+print("The vowel indices are : " + str(res)) 
+
+
+
+X-----------------------------X----------------------------------------------X--------------------------------------------------------------X--------------------------------------X
+
+test_str = input(" ")
+  
+# printing original string
+print("The original string is : " + test_str)
+  
+# Vowel indices in String
+# Using loop
+res = []
+for i in range(len(test_str)):
+    if test_str[i] in "aeiou":
+       res.append(i)
+       
+  
+# printing result 
+print("The vowel indices are : " + str(res)) 
+
+X-----------------------------X----------------------------------------------X--------------------------------------------------------------X--------------------------------------X
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+X-----------------------------X----------------------------------------------X--------------------------------------------------------------X--------------------------------------X
