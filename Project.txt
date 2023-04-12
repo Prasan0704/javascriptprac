@@ -1,0 +1,55 @@
+const express = require('express');
+const bodyParser = require('body-parser');
+const cors = require('cors');
+const mongoose = require('mongoose');
+
+const app = express();
+
+// Middleware
+app.use(bodyParser.json());
+app.use(cors());
+
+// Connect to MongoDB
+mongoose.connect('mongodb://localhost/my-database', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+});
+
+// Define schema and model for the data
+const mySchema = new mongoose.Schema({
+  name: String,
+  email: String,
+  age: Number,
+});
+const MyModel = mongoose.model('MyModel', mySchema);
+
+// Routes
+app.get('/api/my-model', async (req, res) => {
+  const data = await MyModel.find();
+  res.json(data);
+});
+
+app.post('/api/my-model', async (req, res) => {
+  const data = new MyModel(req.body);
+  await data.save();
+  res.json({ message: 'Data saved successfully' });
+});
+
+app.put('/api/my-model/:id', async (req, res) => {
+  const { id } = req.params;
+  const data = await MyModel.findByIdAndUpdate(id, req.body);
+  res.json({ message: 'Data updated successfully' });
+});
+
+app.delete('/api/my-model/:id', async (req, res) => {
+  const { id } = req.params;
+  await MyModel.findByIdAndDelete(id);
+  res.json({ message: 'Data deleted successfully' });
+});
+
+// Start the server
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Server started on port ${PORT}`);
+});
+https://opensource.com/article/22/7/javascript-api-express
